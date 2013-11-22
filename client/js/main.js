@@ -38,6 +38,6 @@ function changeName() {
   var user = prompt("Enter Name: ");
   
   if(user) {
-    socket.emit('change user', user);
+    socket.emit('change name', user);
   } 
 }

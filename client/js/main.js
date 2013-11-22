@@ -33,3 +33,11 @@ socket.on('chatted', function (data) {
 socket.on('users', function (data) {
   console.log(data);
 })
+
+function changeName() {
+  var user = prompt("Enter Name: ");
+  
+  if(user) {
+    socket.emit('change user', user);
+  } 
+}

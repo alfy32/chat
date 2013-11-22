@@ -1,0 +1,13 @@
+{
+  "name": "socket-test",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node server/app.js"
+  },
+  "dependencies": {
+    "express": "*",
+    "stylus": "*",
+    "socket.io": "*"
+  }
+}

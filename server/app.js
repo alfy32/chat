@@ -7,7 +7,7 @@ var fs      = require('fs');
 
 var app = express();
 
-app.set('port', process.env.PORT || process.argv[2] || 3000);
+app.set('port', process.env.PORT || process.argv[2] || 3006);
 
 // all environments
 app.use(express.favicon());

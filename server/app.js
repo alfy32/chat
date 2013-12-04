@@ -64,6 +64,7 @@ io.sockets.on('connection', function (socket) {
 
   socket.on('change name', function(data) {
     user.name = data;
+    socket.broadcast.emit('users', users);
   });
 
   socket.on('disconnect', function() {

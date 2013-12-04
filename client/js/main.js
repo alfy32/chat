@@ -34,7 +34,7 @@ socket.on('users', function (data) {
 
   for(var i in data) {
     var div = $('<div>');
-    div.text(data[i]);
+    div.text(data[i].name);
 
     $('.users').append(div);
   }

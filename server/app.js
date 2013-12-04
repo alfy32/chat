@@ -52,9 +52,10 @@ io.sockets.on('connection', function (socket) {
 
   socket.emit('users', users);
   socket.broadcast.emit('chatted', {
-    user: admin,
+    user: admin.name,
     chat: user.name + " has joined the chat"
   });
+  socket.broadcast.emit('users', users);
 
   socket.on('chat', function (data) {
     var response = {

@@ -7,7 +7,6 @@
   },
   "dependencies": {
     "express": "*",
-    "stylus": "*",
     "socket.io": "*"
   }
 }

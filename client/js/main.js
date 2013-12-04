@@ -1,5 +1,4 @@
-
-var socket = io.connect('http://localhost');
+var socket = io.connect('http://ec2-54-201-18-251.us-west-2.compute.amazonaws.com');
 
 $("#chat-input").keydown(function(e) {
 	if(e.which == 13) {
@@ -40,3 +39,11 @@ socket.on('users', function (data) {
     $('.users').append(div);
   }
 });
+
+function changeName() {
+  var user = prompt("Enter Name: ");
+  
+  if(user) {
+    socket.emit('change name', user);
+  } 
+}

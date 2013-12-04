@@ -40,6 +40,7 @@ var userCount = 0;
 
 io.sockets.on('connection', function (socket) {
   var me = "User #" + ++userCount;
+  var id = userCount;
   users.push(me);
 
   socket.emit('users', users);
@@ -52,5 +53,10 @@ io.sockets.on('connection', function (socket) {
 
     socket.broadcast.emit('chatted', response);
     console.log(response);
+  });
+
+  socket.on('disconnect', function() {
+    users.splice(userCount, 1);
+    socket.emit('users', users);
   });
 });

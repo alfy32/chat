@@ -31,5 +31,12 @@ socket.on('chatted', function (data) {
 });
 
 socket.on('users', function (data) {
-  console.log(data);
-})
+  $('.users').empty();
+
+  for(var i in data) {
+    var div = $('<div>');
+    div.text(data[i]);
+
+    $('.users').append(div);
+  }
+});

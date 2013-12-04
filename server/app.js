@@ -51,6 +51,10 @@ io.sockets.on('connection', function (socket) {
   users[user.id] = user;
 
   socket.emit('users', users);
+  socket.broadcast.emit('chatted', {
+    user: admin,
+    chat: user.name + " has joined the chat"
+  });
 
   socket.on('chat', function (data) {
     var response = {

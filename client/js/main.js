@@ -1,4 +1,4 @@
-var socket = io.connect('http://ec2-54-201-18-251.us-west-2.compute.amazonaws.com');
+var socket = io.connect('http://chat.alfy32.com');
 
 $("#chat-input").keydown(function(e) {
 	if(e.which == 13) {
